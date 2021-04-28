@@ -5,15 +5,173 @@
 
 int main() //메인 함수 한 프로젝트에 한 개만 존재해야 함
 {
+	//6-2장
+	int i, j;
+	for (i = 0; i < 6; i++)
+	{
+		for (j = 0; j < i; j++)
+		{
+			printf(" ");
+		}
+		for (j = 0; j < 2 * (5 - i) + 1; j++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	/*for (i = 0; i < 5; i++) {
+		for (j = 0; j < 5; j++) {
+			if (j == i || j==(4-i))
+				printf("*");
+			else
+				printf(" ");
+		}
+		printf("\n");
+	}*/
+	//6-1장
+	/*int a = 1;
+	do {
+		a *= 2;
+	} while (a < 10);
+	printf("%d", a);*/
+	//int a = 1,i;
+	//for (i = 0; i < 5; i++)
+	//{
+	//	a *= 2;
+	//}
+	//printf("a : %d", a);
+	/*int a = 1;
+	while (a < 10)
+	{
+		a = a * 2;
+	}
+	printf("a : %d\n", a);*/
+	//5-2장
+	/*int rank = 2, m = 0;
+	switch (rank) 
+	{
+	case 1:
+		m = 300;
+		break;
+	case 2:
+		m = 200;
+		break;
+	case 3:
+		m = 100;
+		break;
+	default:
+		m = 10;
+		break;
+	}
+	printf("m = %d", m);*/
+	/*int a = 20, b = 10;
+	if (a < 0)
+		if (b < 0)
+			printf("ok");
+	else
+		printf("ok");*/
+		//int a = 20, b = 10;
+	//if (a > 10)
+	//	if (b >= 0)
+	//		b = 1;
+	//	else
+	//		b = -1;
+	//printf("a:%d,b:%d", a, b);
+	//5-1장
+	//int a = 0;
+	//if (a > 0)
+	//	printf("a는 양수입니다.");
+	//else if (a < 0)
+	//	printf("a는 음수입니다.");
+	//else
+	//	printf("a는 0입니다.");
+	//int a = 20, b = 0;
+	//if (a > 10)
+	//{
+	//	b = a;
+	//}
+	//else
+	//{
+	//	b = -a;
+	//}
+	//printf("a : %d, b : %d", a, b);
+	//4-2장
+	/*int a = 10, b = 5, res;
+	printf("res = %d\n", a / b * 2);
+	printf("res = %d\n", ++a * 3);
+	printf("res = %d\n", a > b && a!= 5);
+	printf("res = %d\n", a % 3 == 0);*/
+	//char ch = 128;//0b 1000 0000
+	//unsigned char ch1 = 128;
+	//printf("%d\n", ch >> 1);//0b 1100 0000 -64
+	//printf("%d\n", ch1 >> 1);//  0100 0000  64
+	//int a = 10;//00001010
+	//int b = 12;//00001100
+	//printf("a & b : %d\n", a & b);
+	//printf("a ^ b : %d\n", a ^ b);
+	//printf("a | b : %d\n", a | b);
+	//printf("~a : %d\n", ~a);
+	//printf("a << 1 : %d\n", a << 1);
+	//printf("a >> 2 : %d\n", a >> 2); 
+	/*int a = 10, b = 20, res;
+	res = (a > b) ? a : b;
+	printf("큰 값 : %d\n", res);*/
+	/*int a = 10, b = 20, res=(++a,b++);
+	printf("a:%d b:%d\n", a, b);
+	printf("res:%d\n", res);*/
+	/*int a = 10, b = 20, res = 2;
+	a += 20;
+	res *= b + 10;
+	printf("a = %d, b = %d\n", a, b);
+	printf("res = %d\n", res);*/
+	/*int a = 10;
+	double b = 3.14;
+	char ch = 'ABC';
+	printf("int double char 의 변수형 크기 : %d %d %d", sizeof a, sizeof(b), sizeof(ch));
+	*///int a = 20, b = 3;//왼쪽항을 형변환 시킬 수 없음
+	//double res=(double)a/(double)b;
+	//printf("a = %d, b = %d, res = %.1lf\n", a, b, res);
+	//a = (int)res;
+	//printf("(int) %.1lf의 결과 : %d\n", res, a);
+
+	//4-1장
+	//실수형 데이터는 나머지연산이 안됨
+	/*int a = 10, b = 20, res=a+b;
+	printf("a = %d, b = %d, res = %d\n", a, b, res);*/
+	/*int a = 30;
+	printf("(a>10) && (a<20) : %d\n", (a > 10) && (a < 20));
+	printf("(a>10) || (a<20) : %d\n", (a > 10) || (a < 20));
+	printf("!(a>10) : %d\n", !(a > 10));*/
+	/*int a = 10, b = 20, c = 10;
+	printf("a > b : %d\n", (a > b));
+	printf("a < b : %d\n", (a < b));
+	printf("a != b : %d\n", (a != b));
+	printf("a != c : %d\n", (a != c));*/
+	/*int a = 5, b = 5, pre = (++a) * 3, post = (b++) * 3;
+	printf("a b 초기값 %d %d \n", a, b);
+	printf("전위 : (++a)*3=%d, 후위 : (b++)*3=%d", pre, post);*/
+	/*int a = 10, b = 20;
+	printf("전위 증가 연산자 %d, 후위 증가 연산자 %d", ++a, b++);*/
+	//double apple = 5.0 / 2.0;
+	//int banana = 5 / 2;
+	//int orange = 5 % 2;
+	//printf("%.1lf %d %d", apple, banana, orange);
+	/*int a = 10, b = 20;
+	int sum = a + b;
+	int sub = a - b;
+	int mul = a * b;
+	int inv = -a;
+	printf("a값 b값 : %d %d\n", a, b);
+	printf("덧셈 %d, 뺄셈 %d, 곱셈 %d, a의 음수 %d\n", sum, sub, mul, inv);*/
 	//3-2장
-	int a;
-	char b;
-	printf("정수 하나를 입력하세요 : $ ");
-	scanf("%d", &a);
-	getchar();//버퍼에서 문자하나 가져옴(사실상 버림)
-	printf("문자 하나를 입력하세요 : $ ");
-	scanf("%c", &b);//scanf(" %c", &b); 도 가능
-	printf("입력된 값은 %d, %c 입니다.\n", a, b);
+	//int a;
+	//char b;
+	//printf("정수 하나를 입력하세요 : $ ");
+	//scanf("%d", &a);
+	//getchar();//버퍼에서 문자하나 가져옴(사실상 버림)
+	//printf("문자 하나를 입력하세요 : $ ");
+	//scanf("%c", &b);//scanf(" %c", &b); 도 가능
+	//printf("입력된 값은 %d, %c 입니다.\n", a, b);
 	/*int age;
 	double height;
 	printf("나이와 키를 입력하세요 : ");
