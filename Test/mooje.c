@@ -2,11 +2,75 @@
 #include <stdio.h> // 헤더파일
 #include <stdlib.h>
 #include <math.h>
-
+#include "mooje.h"
+//void func(int,int);
+//int func() // 입력과 출력이 없는 함수
+//{
+//	int a = 10, b = 20;
+//	int res = a + b;
+//	printf("res : %d", res);
+//	return res;
+//}
+//int get_num(void)
+//{
+//	int num;
+//	printf("양수 입력 : ");
+//	scanf("%d", &num);
+//	return num;
+//}
+//void print_char(char ch,  int count)
+//{
+//	int i = 0;
+//
+//	for (i = 0; i < count; i++)
+//	{
+//		printf("%c", ch);
+//	}
+//}
+//void print_line()
+//{
+//	printf("--------------------\n");
+//}
+//void fruit(int count) {
+//	printf("apple\n");
+//	if (count == 3) return;
+//	fruit(count + 1);
+//	printf("jam\n");
+//}
 int main() //메인 함수 한 프로젝트에 한 개만 존재해야 함
 {
+	//8-2장
+	char str[80] = "applejam";
+	printf("최초 문자열 : %s\n", str);
+	printf("문자열 입력 : ");
+	scanf("%s", str);
+	printf("입력 후 문자열 : %s\n", str);
+	//8-1장
+	//int score[5], i, total = 0;
+	//int count = sizeof(score) / sizeof(int);
+	//for (i = 0; i < count; i++)
+	//	scanf("%d", &score[i]);
+	//for (i = 0; i < count; i++)
+	//{
+	//	total += score[i];
+	//	printf("%5d", score[i]);//%5d : 5칸 들여쓰기
+	//}
+	//printf("\n");
+	//double avg=total/(double)count;
+	//printf("평균 : %.1lf\n", avg);
+	/*int arr[5] = { 10,20,10 + 20 };
+	printf("%d %d %d %d %d", arr[0],arr[1],arr[2],arr[3],arr[4]);*/
+	//7-2장
+	/*fruit(1);*/
+	/*print_line();
+	printf("발탄 비아 쿠크\n");
+	print_line();*/
+	//print_char('@', 5);
+	//printf("반환값 : %d\n", get_num());
+	//7-1장
+	//int score=func();
 	//6-2장
-	int i, j;
+	/*int i, j;
 	for (i = 0; i < 6; i++)
 	{
 		for (j = 0; j < i; j++)
@@ -18,7 +82,7 @@ int main() //메인 함수 한 프로젝트에 한 개만 존재해야 함
 			printf("*");
 		}
 		printf("\n");
-	}
+	}*/
 	/*for (i = 0; i < 5; i++) {
 		for (j = 0; j < 5; j++) {
 			if (j == i || j==(4-i))
