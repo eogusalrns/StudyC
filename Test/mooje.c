@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h> // 헤더파일
 #include <stdlib.h>
+#include <string.h>
 #include <math.h>
 #include "mooje.h"
 //void func(int,int);
@@ -37,14 +38,156 @@
 //	fruit(count + 1);
 //	printf("jam\n");
 //}
+//void print_arr(int* p, int size)
+//{
+//	int i;
+//	for (i = 0; i < size; i++)
+//	{
+//		printf("%d ", p[i]);
+//	}
+//	printf("\n");
+//}
+void input_ary(double *pa,int size)
+{
+	int i;
+	for (i = 0; i < size; i++)
+	{
+		scanf("%lf", pa+i);
+	}
+}
+double find_max(double* pa, int size)
+{
+	int i;
+	double max=pa[0];
+
+	for (i = 1; i < size; i++)
+	{
+		if (pa[i] > max)
+			max = pa[i];
+	}
+
+	return max;
+}
 int main() //메인 함수 한 프로젝트에 한 개만 존재해야 함
 {
+	//10-2장
+	double arr[5], max;
+	int size = sizeof(arr) / sizeof(arr[0]);
+	input_ary(arr, size);
+	max = find_max(arr, size);
+	printf("배열의 최댓값 : %.1lf\n", max);
+	//int arr1[5] = { 10,20,30,40,50 };
+	//int arr2[7] = { 10,20,30,40,50,60,70 };
+	//print_arr(arr1, 5);
+	//print_arr(arr2, 7);
+	//int arr[5] = { 10,20,30,40,50 };
+	//print_arr(arr);
+	//10-1장
+	//int arr[5] = { 10,20,30,40,50 };
+	//int* pa = arr;
+	//int* pb = pa + 3;
+	//printf("pa : %u, pb : %u\n", pa, pb);
+	//pa++;
+	//printf("pb - pa : %u\n", pb - pa);
+	//printf("앞에 있는 배열 요소의 값 출력 : ");
+	//if (pa < pb) printf("%d\n", *pa);
+	//else printf("%d\n", *pb);
+	//int arr[3] = { 10,20,30 };
+	//int* pa = arr;
+	//int i;
+	//printf("배열의 값 : ");
+	//for (i = 0; i < 3; i++)
+	//{
+	//	printf("%d ", *pa);
+	//	pa++;
+	//}
+	//int arr[3];
+	//int* pa = arr;
+	//int i;
+	//*pa = 10;
+	//*(pa + 1) = 20;
+	//pa[2] = pa[0] + *(pa + 1);
+	//for (i = 0; i < 3; i++)
+	//{
+	//	printf("%5d", *(pa + i));
+	//}
+	//int arr[3], i;
+	//*(arr + 0) = 10;
+	//*(arr + 1) = *(arr + 0) + 10;
+	//printf("세 번째 요소 키보드 입력 : ");
+	//scanf("%d", arr + 2);
+	//for (i = 0; i < 3; i++)
+	//{
+	//	printf("%5d", *(arr + i));
+	//}
+
+	//9-2장
+	//int a = 10, b = 20;
+	//int a = 10;
+	//int* p = &a;
+	//double* pd;
+	//pd = p;
+	//printf("%lf\n",*pd);
+	/*char ch, * pc = &ch;
+	int in, * pi = &in;
+	double db, * pd = &db;
+	printf("char int double 변수의 주소 크기 : %d %d %d\n", sizeof(&ch), sizeof(&in), sizeof(&db));
+	printf("char int double * 포인터 변수의 주소 크기 : %d %d %d\n", sizeof(pc), sizeof(pi), sizeof(pd));
+	printf("char int double * 포인터 변수가 가리키는 변수 크기 : %d %d %d\n", sizeof(*pc), sizeof(*pi), sizeof(*pd));*/
+	//9-1장
+	//int a = 10, b = 20;
+	//const int* pa = &a;//가리키는 값 변경 불가
+	////*pa = 20;
+	//double* const pb = &b;//가리키는 주소 변경 불가
+	////pb = &a;
+	//printf("포인터 크기는 int double : %d %d\n", sizeof(pa), sizeof(pb));
+	//printf("%d\n", *pa);
+	//pa = &b;
+	//printf("%d\n", *pa);
+	//pa = &a;
+	//a = 100;
+	//printf("%d\n", *pa);
+	/*int a = 10, b = 15, total;
+	double avg;
+	int* pa=&a, * pb=&b;
+	int* pt = &total;
+	double* pg = &avg;
+	*pt = *pa + *pb;
+	*pg = *pt / 2.0;
+	printf("%d %d %d %.1lf", *pa, *pb, *pt, *pg);*/
+	//int a, * pa;
+	//pa = &a;
+	//a = 10;
+	//printf("%d %d", a, *pa);
+	/*int a;
+	double b;
+	char c;
+	printf("%p %p %p", &a, &b, &c);*/
 	//8-2장
-	char str[80] = "applejam";
+	/*char str[10];
+	str[0] = 'C';
+	str[2] = '\0';
+	printf("%s", str);*/
+	//char str[80];
+	//printf("문자열 입력 : ");
+	//gets(str);
+	//printf("문자열 출력 : ");
+	//puts(str);
+	//char str1[80] = "hangook";
+	//char str2[40];
+	//strcpy(str1, "한국");
+	//strcpy(str2, str1);
+	//printf("%s %s", str1, str2);
+	//int i;
+	//int arr[5] = { 10,20,30,40 };
+	//int size = sizeof(arr) / sizeof(arr[0]);
+	//for (i = size-1; i >= 0; i--)
+	//	printf("arr[%d]=%d\n", i, arr[i]);
+	/*char str[80] = "applejam";
 	printf("최초 문자열 : %s\n", str);
 	printf("문자열 입력 : ");
 	scanf("%s", str);
-	printf("입력 후 문자열 : %s\n", str);
+	printf("입력 후 문자열 : %s\n", str);*/
 	//8-1장
 	//int score[5], i, total = 0;
 	//int count = sizeof(score) / sizeof(int);
