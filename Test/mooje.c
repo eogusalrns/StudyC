@@ -47,35 +47,145 @@
 //	}
 //	printf("\n");
 //}
-void input_ary(double *pa,int size)
-{
-	int i;
-	for (i = 0; i < size; i++)
-	{
-		scanf("%lf", pa+i);
-	}
-}
-double find_max(double* pa, int size)
-{
-	int i;
-	double max=pa[0];
-
-	for (i = 1; i < size; i++)
-	{
-		if (pa[i] > max)
-			max = pa[i];
-	}
-
-	return max;
-}
+//void input_ary(double *pa,int size)
+//{
+//	int i;
+//	for (i = 0; i < size; i++)
+//	{
+//		scanf("%lf", pa+i);
+//	}
+//}
+//double find_max(double* pa, int size)
+//{
+//	int i;
+//	double max=pa[0];
+//
+//	for (i = 1; i < size; i++)
+//	{
+//		if (pa[i] > max)
+//			max = pa[i];
+//	}
+//
+//	return max;
+//}
+//void my_gets(char* str, int size)
+//{
+//	int ch, i = 0;
+//	ch = getchar();
+//	while ((ch != '\n') && (i < size - 1))
+//	{
+//		str[i] = ch;
+//		i++;
+//		ch = getchar();
+//	}
+//	str[i] = '\0';
+//}
 int main() //메인 함수 한 프로젝트에 한 개만 존재해야 함
 {
+	//12-2장
+	
+	//12-1장
+	/*int i = 0;
+	char ch, str[20];
+	do {
+		ch = getchar();
+		str[i] = ch;
+		i++;
+	} while (ch != '\n');
+	str[i] = '\0';
+	printf("%s", str);*/
+	//char str[80] = "apple juice";
+	//char* ps = "banana";
+	//puts(str);
+	//fputs(ps, stdout);
+	//puts("milk");
+	/*int age;
+	char name[20];
+
+	printf("나이 입력 : ");
+	scanf("%d", &age);
+	fgetc(stdin);
+	printf("이름 입력 : ");
+	gets(name);
+	printf("나이 : %d, 이름 : %s", age, name);*/
+	/*char str[80];
+	printf("공백이 포함된 문자열 입력 : ");
+	fgets(str, sizeof(str), stdin);
+	printf("입력된 문자열은 %s입니다.", str);*/
+	//char str[80];
+
+	//printf("공백이 포함된 문자열 입력 : ");
+	//gets(str);
+	//printf("입력한 문자열은 %s입니다.", str);
+	//strlen(str);
+	/*printf("문자열 입력 : ");
+	scanf("%s", str);
+	printf("첫 번째 단어 : %s\n", str);
+	scanf("%s", str);
+	printf("버퍼에 남아 있는 두 번째 단어 : %s\n", str);*/
+
+	//char* dessert = "apple";
+	//printf("오늘 후식은 %s입니다.\n", dessert);
+	//dessert = "banana";
+	//printf("내일 후식은 %s입니다.\n", dessert);
+
+	/*printf("apple 주소 시작 값 : %p\n", "apple");
+	printf("두번째 문자 주소 값 : %p\n", "apple"+1);
+	printf("첫번째 문자 : %c\n", *"apple");
+	printf("두번째 문자 : %c\n", *("apple"+1));
+	printf("배열로 표현할 세 번째 문자 : %c", "apple"[2]);*/
+
+	//11-2장
+	//int num, grade;
+	//printf("성적을 입력하세요 : ");
+	//grade = getchar();
+	//printf("학번을 입력하세요 : ");
+	//scanf("%d", &num);
+	////getchar();//버퍼비워준다
+	//fflush(stdin);
+	//printf("학번 : %d, 성적 : %c", num, grade);
+
+	//char str[7];
+	//my_gets(str, sizeof(str));
+	//printf("입력한 문자열 : %s\n", str);
+	//int res;
+	//char ch;
+
+	//while (1)
+	//{
+	//	res = scanf("%c", &ch);
+	//	if (res == EOF) break;
+	//	printf("%d ", ch);
+	//}
+	//char ch;
+	//int i;
+
+	//for (i = 0; i < 6; i++)
+	//{
+	//	scanf("%c", &ch);
+	//	printf("%c", ch);
+	//}
+	//11-1장
+	//int ch = getchar();
+	//printf("입력한 문자 : ");
+	//putchar(ch);
+	/*char ch1, ch2;
+	scanf("%c%c", &ch1, &ch2);
+	printf("[%c%c %d%d]", ch1, ch2, ch1, ch2);*/
+	//char small, cap = 'G';
+
+	//if ((cap >= 65) && (cap <= 'Z'))
+	//{
+	//	small = cap + ('a' - 'A');
+	//}
+
+	//printf("%c %c\n", small, cap);
 	//10-2장
-	double arr[5], max;
+	/*double arr[5], max;
 	int size = sizeof(arr) / sizeof(arr[0]);
 	input_ary(arr, size);
 	max = find_max(arr, size);
-	printf("배열의 최댓값 : %.1lf\n", max);
+	printf("배열의 최댓값 : %.1lf\n", max);*/
 	//int arr1[5] = { 10,20,30,40,50 };
 	//int arr2[7] = { 10,20,30,40,50,60,70 };
 	//print_arr(arr1, 5);

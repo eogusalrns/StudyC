@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 input_ary(int *pa);
-swap_ary(int*pa);
+swap_ary(int*pa,int size);//포인터 두개로 굳이?
 print_ary(int*pa);
 
 int main()
