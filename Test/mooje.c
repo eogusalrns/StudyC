@@ -80,10 +80,225 @@
 //	}
 //	str[i] = '\0';
 //}
+//char *my_strcpy(char* str, char *ch)
+//{
+//	char* po = str;
+//
+//	while (*ch != '\0')
+//	{
+//		*str = *ch;
+//		str++;
+//		ch++;
+//	}
+//	*str = '\0';
+//	return po;
+//}
+//void assign(void)
+//{
+//	int a = 10;
+//	printf("assign 함수 a : %d\n", a);
+//}
+//int a;
+//
+//void assign10(void)
+//{
+//	a = 10;
+//}
+//
+//void assign20(void)
+//{
+//	int a = 20;//지역변수
+//}
+//void auto_func()
+//{
+//	int a = 0;
+//	a++;
+//	printf("%d\n", a);
+//}
+//void static_func()
+//{
+//	static int a;
+//	a++;
+//	printf("%d\n", a);
+//}
+//void add_ten(int *pa)
+//{
+//	*pa+= 10;
+//}
+//int *ssum(int a, int b)
+//{
+//	int res;
+//	res = a + b;
+//	return &res;
+//}
 int main() //메인 함수 한 프로젝트에 한 개만 존재해야 함
 {
+	//15-1장
+	//14-2장
+	/*int ary1[4] = { 1,2,3,4 };
+	int ary2[4] = { 5,6,7,8 };
+	int ary3[4] = { 9,10,11,12 };
+	int* pary[3] = { ary1,ary2,ary3 };
+	int i, j;
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 4; j++)
+		{
+			printf("%5d", pary[i][j]);
+		}
+		printf("\n");
+	}*/
+	/*char* pary[5];
+	int i;
+	pary[0] = "dog";
+	pary[1] = "elephant";
+	pary[2] = "horse";
+	pary[3] = "tiger";
+	pary[4] = "lion";
+
+	for (i = 0; i < 5; i++)
+		printf("%s\n", pary[i]);*/
+	//14-1장
+	/*int score[2][3][4] = {
+		{{72,80,95,60},{68,98,83,90},{75,72,84,90}},
+		{{64,85,90,88},{95,92,88,95},{43,72,56,75}}
+	};
+	int i, j, k;
+
+	for (i = 0; i < 2; i++)
+	{
+		printf("%d반 점수...\n", i + 1);
+		for (j = 0; j < 3; j++)
+		{
+			for (k = 0; k < 4; k++)
+			{
+				printf("%5d", score[i][j][k]);
+			}
+			printf("\n");
+		}
+		printf("\n");
+	}*/
+	//char animal[5][20];
+	//int i, count;
+
+	//count = sizeof(animal) / sizeof(animal[0]);
+	//for (i = 0; i < count; i++)
+	//	scanf("%s", animal[i]);
+	//for (i = 0; i < count; i++)
+	//	printf("%5s", animal[i]);
+	//int num[3][4] = {
+	//	{1,2,3,4,},
+	//	{5,6,7,8,},
+	//	{9,10,11,12}
+	//};
+	//int i, j;
+	//for (i = 0; i < 3; i++) 
+	//{
+	//	for (j = 0; j < 4; j++)
+	//		printf("%5d", num[i][j]);
+	//	printf("\n");
+	//}
+	//int score[3][4];
+	//int total, i, j;
+	//double avg;
+	//for (i = 0; i < 3; i++)
+	//{
+	//	total = 0;
+	//	printf("%d번째 과목의 점수 입력 : ", i+1);
+	//	for (j = 0; j < 4; j++)
+	//	{
+	//		scanf("%d", &score[i][j]);
+	//		total += score[i][j];
+	//	}
+	//	avg = total / 4.0;
+	//	printf("%d 번째 과목의 총점 %d 평균 %.2lf\n", i + 1, total, avg);
+	//}
+	//13-2장
+	//int* resp;
+	//resp = ssum(10, 20);
+	//printf("두 정수의 합 : %d\n", *resp);
+	//int a = 10;
+	//add_ten(&a);
+	//printf("a : %d\n", a);
+	//13-1장
+	//register int i;
+	//int sum = 0;
+	//for (i = 1; i <= 10000; i++)
+	//	sum += i;
+	//printf("%d", sum);
+	//int i;
+	//printf("일반 지역 변수(auto)를 사용한 함수...\n");
+	//for (i = 0; i < 3; i++)
+	//	auto_func();
+	//printf("정적 지역 변수(static)를 사용한 함수...\n");
+	//for (i = 0; i < 3; i++)
+	//	static_func();
+	//printf("a의 호출 전 값 : %d\n", a);
+	//assign10();
+	//assign20();
+	//printf("a의 호출 후 값 : %d\n", a);
+	//int a = 10, b = 20;
+	//printf("교환 전 a와 b의 값 : %d,%d\n", a, b);
+	//{
+	//	int temp;
+	//	temp = a;
+	//	a = b;
+	//	b = temp;
+	//}
+	//printf("교환 후 a와 b의 값 : %d,%d\n", a, b);
+	//auto int a = 0;
+	//assign();
+	//printf("main 함수 a : %d\n", a);
 	//12-2장
-	
+	//char str[80] = "strawberry";
+	//printf("바꾸기 전 문자열 : %s\n", str);
+	//my_strcpy(str, "apple");
+	//printf("바꾼 후 문자열 : %s\n", str);
+	//printf("다른 문자열 대입 : %s\n", my_strcpy(str, "kiwi"));
+	//char str1[80] = "pear";
+	//char str2[80] = "peach";
+
+	//printf("사전에 나중에 나오는 과일 이름 : ");
+
+	//if (strncmp(str1, str2,3) == 0)
+	//	printf("같다");
+	//else
+	//	printf("다르다");
+	//char str1[80], str2[80];
+	//char* resp;
+
+	//printf("2개의 과일 이름 입력 : ");
+	//scanf("%s%s", str1, str2);
+	//if (strlen(str1) > strlen(str2))
+	//	resp = str1;
+	//else
+	//	resp = str2;
+	//printf("이름이 긴 과일은 : %s", resp);
+	//char str[80] = "straw";
+	//strcat(str, "berry");
+	//printf("%s\n", str);
+	//strncat(str, "piece",3);
+	//printf("%s\n", str);
+	//char str[20] = "mango tree";
+	//strncpy(str, "apple-pie", 6);
+	////str[5] = '\0';
+	//printf("%s", str);
+	/*char str1[80] = "strawberry";
+	char str2[80] = "apple";
+	char* ps1 = "banana";
+	char* ps2 = str2;
+	printf("최초 문자열 : %s\n", str1);
+	strcpy(str1, str2);
+	printf("바뀐 문자열 : %s\n", str1);
+
+	strcpy(str1, ps1);
+	printf("바뀐 문자열 : %s\n", str1);
+
+	strcpy(str1, ps2);
+	printf("바뀐 문자열 : %s\n", str1);
+
+	strcpy(str1, "banana");
+	printf("바뀐 문자열 : %s\n", str1);*/
 	//12-1장
 	/*int i = 0;
 	char ch, str[20];
