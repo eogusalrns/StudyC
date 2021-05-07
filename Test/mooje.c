@@ -183,29 +183,255 @@
 //	if (a > b) return a;
 //	else return b;
 //}
+//void print_str(char** ps)
+//{
+//	while (*ps != NULL)
+//	{
+//		printf("%s\n", *ps);
+//		ps++;
+//	}
+//}
+//struct student
+//{
+//	int num;
+//	double grade;
+//};
+//struct profile
+//{
+//	char name[20];
+//	int age;
+//	double height;
+//	char* intro;
+//};
+//struct profile
+//{
+//	int age;
+//	double height;
+//};
+//struct student
+//{
+//	struct profile pf;
+//	int id;
+//	double grade;
+//};
+//struct student
+//{
+//	int id;
+//	char name[20];
+//	double grade;
+//};
+//struct vision
+//{
+//	double left;
+//	double right;
+//};
+//struct vision exchange(struct vision robot)
+//{
+//	double temp;
+//
+//	temp = robot.left;
+//	robot.left = robot.right;
+//	robot.right = temp;
+//
+//	return robot;
+//}
+//struct score
+//{
+//	int kor, eng, math;
+//};
+//struct address
+//{
+//	char name[20];
+//	int age;
+//	char tel[20];
+//	char addr[20];
+//};
+//void print_list(struct address* lp)
+//{
+//	int i;
+//	for (i = 0; i < 5; i++)
+//	{
+//		printf("%10s%15d%15s%20s\n", lp[i].name, lp[i].age, (lp + i)->tel, (lp + i)->addr);
+//	}
+//}
+struct list
+{
+	int num;
+	struct list* next;
+};
 int main() //메인 함수 한 프로젝트에 한 개만 존재해야 함
 {
-	//16-1장
-	int* pi;
-	double* pd;
+	//17-2장
+	struct list a = { 10,0 }, b = { 20,0 }, c = { 30,0 };
+	struct list* head = &a, * current;
 
-	pi = (int*)malloc(sizeof(int));
-	pd = (double*)malloc(sizeof(double));
+	a.next = &b;
+	b.next = &c;
 
-	if ((pi == NULL) || (pd == NULL))
+	printf("head->num : %d\n", head->num);
+	printf("head->next->num : %d\n", head->next->num);
+
+	printf("list all : ");
+	current = head;
+	while (current != NULL)
 	{
-		printf("# 메모리가 부족합니다.\n");
+		printf("%d ", current->num);
+		current = current->next;
+	}
+	printf("\n");
+	//struct address list[5] = {
+	//	{"홍길동1",222,"111","울릉도 독도"},
+	//	{"홍길동2",222,"111-","릉도 독도"},
+	//	{"홍길동3",2222,"111-1","도 독도"},
+	//	{"홍길동4",22222,"111-11","독도"},
+	//	{"홍길동5",222222,"111-111","도"}
+	//};
+	//print_list(list);
+
+	
+	//struct score umi = { 90,80,70 };
+	//struct score* ps = &umi;
+
+	//printf("국어 : %d 영어 : %d 수학 : %d ", (*ps).kor, ps->eng, ps->math);
+	//17-1장
+	//struct vision robot;
+	//printf("시력 입력 : ");
+	//scanf("%lf%lf", &(robot.left), &(robot.right));
+	//robot = exchange(robot);
+	//printf("바뀐 시력 : %.1lf %.1lf\n", robot.left, robot.right);
+	//struct student s1 = { 315,"홍길동",2.4 },
+	//	s2 = { 316,"이순신",3.7 },
+	//	s3 = { 317,"세종대왕",4.4 };
+
+	//struct student max;
+
+	//max = s1;
+	//if (s2.grade > max.grade) max = s2;
+	//if (s3.grade > max.grade) max = s3;
+
+	//printf("학번 : %d 이름 : %s 학점 : %.1lf\n", max.id, max.name, max.grade);
+	//struct student yuni;
+	//yuni.pf.age = 17;
+	//yuni.pf.height = 170.0;
+	//yuni.id = 315;
+	//yuni.grade = 4.3;
+	//printf("나이 : %d\n", yuni.pf.age);
+	//printf("키 : %.1lf\n", yuni.pf.height);
+	//printf("학번 : %d\n", yuni.id);
+	//printf("학점 : %.1lf\n", yuni.grade);
+	//struct profile yuni;
+
+	//strcpy(yuni.name, "최대현");
+	//yuni.age = 26;
+	//yuni.height = 170.0;
+
+	//yuni.intro = (char*)malloc(80);
+	//printf("자기 소개 : ");
+	//gets(yuni.intro);
+
+	//printf("이름 : %s\n", yuni.name);
+	//printf("나이 : %d\n", yuni.age);
+	//printf("키 : %.1lf\n", yuni.height);
+	//printf("자기소개 : %s\n", yuni.intro);
+
+	//free(yuni.intro);
+	/*struct student s1;
+	s1.num = 2;
+	s1.grade = 2.7;
+	printf("학번 : %d %.1lf\n", s1.num, s1.grade);*/
+	//16-2장
+	//char temp[80];
+	//char* str[21] = { 0 };
+	//int i = 0;
+
+	//while (i < 20)
+	//{
+	//	printf("문자열을 입력하세요 : ");
+	//	gets(temp);
+	//	if (strcmp(temp, "end") == 0)break;
+	//	str[i] = (char*)malloc(strlen(temp) + 1);
+	//	strcpy(str[i], temp);
+	//	i++;
+	//}
+	//print_str(str);
+	//for (i = 0; str[i] != NULL; i++)
+	//	free(str[i]);
+	//char temp[80];
+	//char* str[3];
+	//int i;
+	//for (i = 0; i < 3; i++)
+	//{
+	//	printf("문자열을 입력하세요 : ");
+	//	gets(temp);
+	//	str[i] = (char*)malloc(strlen(temp) + 1);
+	//	strcpy(str[i], temp);
+	//}
+
+	//for (i = 0; i < 3; i++)
+	//{
+	//	printf("%s\n", str[i]);
+	//	free(str[i]);
+	//}
+
+	//16-1장
+	/*int* pi;
+	int size = 5, count = 0, num, i;
+
+	pi = (int*)calloc(size, sizeof(int));
+	while (1)
+	{
+		printf("양수만 입력하세요 : ");
+		scanf("%d", &num);
+		if (num <= 0) break;
+		if (count == size)
+		{
+			size += 5;
+			pi = (int*)realloc(pi, size * sizeof(int));
+		}
+		pi[count++] = num;
+	}
+	for (i = 0; i < count; i++)
+	{
+		printf("%5d", pi[i]);
+	}
+	free(pi);*/
+	/*int* pi;
+	int i, sum = 0;
+
+	pi = (int*)malloc(5 * sizeof(int));
+	if (pi == NULL)
+	{
+		printf("메모리가 부족합니다.\n");
 		exit(1);
 	}
-	
-	*pi = 10;
-	*pd = 3.4;
+	printf("다섯 명의 나이를 입력하세요 : ");
+	for (i = 0; i < 5; i++)
+	{
+		scanf("%d", &pi[i]);
+		sum += pi[i];
+	}
+	printf("다섯 명의 평균 나이 : %1.lf\n", (sum / 5.0));
+	free(pi);*/
+	//int* pi;
+	//double* pd;
 
-	printf("정수형으로 사용 : %d\n", *pi);
-	printf("실수형으로 사용 : %.1lf\n", *pd);
+	//pi = (int*)malloc(sizeof(int));
+	//pd = (double*)malloc(sizeof(double));
 
-	free(pi);
-	free(pd);
+	//if ((pi == NULL) || (pd == NULL))
+	//{
+	//	printf("# 메모리가 부족합니다.\n");
+	//	exit(1);
+	//}
+	//
+	//*pi = 10;
+	//*pd = 3.4;
+
+	//printf("정수형으로 사용 : %d\n", *pi);
+	//printf("실수형으로 사용 : %.1lf\n", *pd);
+
+	//free(pi);
+	//free(pd);
 	//15-2장
 	//int a = 10;
 	//double b = 3.5;
