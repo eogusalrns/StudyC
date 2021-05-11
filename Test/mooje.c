@@ -3,7 +3,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#include "mooje.h"
+#include "student.h"
+#define PI 3.14159
+#define LIMIT 100.0
+#define MSG "passed!"
+#define ERR_PRN printf("허용 범위를 벗어났습니다.\n")
+#define SUM(a,b) (a+b)
+#define MUL(a,b) (a*b)
+#
 //void func(int,int);
 //int func() // 입력과 출력이 없는 함수
 //{
@@ -254,31 +261,317 @@
 //		printf("%10s%15d%15s%20s\n", lp[i].name, lp[i].age, (lp + i)->tel, (lp + i)->addr);
 //	}
 //}
-struct list
-{
-	int num;
-	struct list* next;
-};
+//struct list
+//{
+//	int num;
+//	struct list* next;
+//};
+//union student
+//{
+//	int num;
+//	double grade;
+//};
+//struct student1
+//{
+//	int num;
+//	double grade;
+//};
+//enum season { SPRING, SUMMER, FALL=100, WINTER };
+//typedef struct
+//{
+//	int num;
+//	double grade;
+//}Student;
+////typedef struct student Student;
+//void print_data(Student* ps)
+//{
+//	printf("학번 : %d\n", ps->num);
+//	printf("학점 : %.1lf\n", ps->grade);
+//}
 int main() //메인 함수 한 프로젝트에 한 개만 존재해야 함
 {
-	//17-2장
-	struct list a = { 10,0 }, b = { 20,0 }, c = { 30,0 };
-	struct list* head = &a, * current;
+	//19-1장
+	int a = 10, b = 20;
+	int x = 30, y = 40;
+	int res;
 
-	a.next = &b;
-	b.next = &c;
+	printf("a + b = %d\n", SUM(a, b));
+	printf("x + y = %d\n", SUM(x, y));
+	res = 30 / MUL(2, 5);
+	printf("res : %d\n", res);
+	/*double radius, area;
 
-	printf("head->num : %d\n", head->num);
-	printf("head->next->num : %d\n", head->next->num);
+	printf("반지름을 입력하세요(10 이하) : ");
+	scanf("%lf", &radius);
+	area = PI * radius * radius;
+	if (area > LIMIT) ERR_PRN;
+	else printf("원의 면적 : %.2lf (%s)\n", area, MSG);*/
+	//Student a = { 315,"홍길동" };
+	//printf("학번 : %d, 이름 : %s\n", a.num, a.name);
+	//18-2장
+	//FILE* afp, * bfp;
+	//int num = 10;
+	//int res;
 
-	printf("list all : ");
-	current = head;
-	while (current != NULL)
+	//afp = fopen("a.txt", "wt");
+	//fprintf(afp, "%d", num);
+
+	//bfp = fopen("b.txt", "wb");
+	//fwrite(&num, sizeof(num), 1, bfp);
+
+	//fclose(afp);
+	//fclose(bfp);
+
+	//bfp = fopen("b.txt", "rb");
+	//fread(&res, sizeof(res), 1, bfp);
+	//printf("%d", res);
+
+	//fclose(bfp);
+	/*FILE* fp;
+	int age;
+	char name[20];
+
+	fp = fopen("a.txt", "r");
+
+	fscanf(fp, "%d", &age);
+	fgetc(fp) != '\n';
+	fgets(name, sizeof(name), fp);
+
+	printf("나이 : %d, 이름 : %s", age, name);
+	fclose(fp);*/
+	//FILE* ifp, * ofp;
+	//char name[20];
+	//int kor, eng, math;
+	//int total;
+	//double avg;
+	//int res;
+
+	//ifp = fopen("a.txt", "r");
+	//if (ifp == NULL)
+	//{
+	//	printf("입력 파일을 열지 못했습니다.\n");
+	//	return 1;
+	//}
+
+	//ofp = fopen("b.txt", "w");
+	//if (ofp == NULL)
+	//{
+	//	printf("출력 파일을 열지 못했습니다.\n");
+	//	return 1;
+	//}
+
+	//while (1)
+	//{
+	//	res = fscanf(ifp, "%s%d%d%d", name, &kor, &eng, &math);
+	//	if (res == EOF)
+	//	{
+	//		break;
+	//	}
+	//	total = kor + eng + math;
+	//	avg = total / 3.0;
+	//	fprintf(ofp, "%s%5d%7.1lf\n", name, total, avg);
+	//}
+	//fclose(ifp);
+	//fclose(ofp);
+	//FILE* ifp, * ofp;
+	//char str[80];
+	//char* res;
+
+	//ifp = fopen("a.txt", "r");
+	//if (ifp == NULL)
+	//{
+	//	printf("입력 파일을 열지 못했습니다.\n");
+	//	return 1;
+	//}
+
+	//ofp = fopen("b.txt", "w");
+	//if (ofp == NULL)
+	//{
+	//	printf("출력 파일을 열지 못했습니다.\n");
+	//	return 1;
+	//}
+
+	//while (1)
+	//{
+	//	res = fgets(str, sizeof(str), ifp);
+	//	if (res == NULL)
+	//		break;
+	//	str[strlen(str) - 1] = '\0';
+	//	fputs(str, ofp);
+	//	fputs(" ", ofp);
+	//}
+	//fclose(ifp);
+	//fclose(ofp);
+	//18-1장
+	//FILE* fp;
+	//char str[20];
+
+	//fp = fopen("a.txt", "a+");
+	//if (fp == NULL)
+	//{
+	//	printf("파일을 만들지 못했습니다.\n");
+	//	return 1;
+	//}
+	//while (1)
+	//{
+	//	printf("과일 이름 : ");
+	//	scanf("%s", str);
+	//	if (strcmp(str, "end") == 0)
+	//	{
+	//		break;
+	//	}
+	//	else if (strcmp(str, "list") == 0)
+	//	{
+	//		fseek(fp, 0, SEEK_SET);
+	//		while (1)
+	//		{
+	//			fgets(str, sizeof(str), fp);
+	//			if (feof(fp))
+	//				break;
+	//			printf("%s", str);
+	//		}
+	//	}
+	//	else
+	//	{
+	//		fprintf(fp, "%s\n", str);
+	//	}
+	//}
+	//fclose(fp);
+	//FILE* fp;
+	//int ary[10] = { 13,10,13,13,10,26,13,10,13,10 };
+	//int i, res;
+
+	//fp = fopen("a.txt", "wb");
+	//for (i = 0; i < 10; i++)
+	//	fputc(ary[i], fp);
+	//fclose(fp);
+
+	//fp = fopen("a.txt", "rt");
+	//while (1)
+	//{
+	//	res = fgetc(fp);
+	//	if (res == EOF) break;
+	//	printf("%4d", res);
+	//}
+	//fclose(fp);
+	//int ch;
+
+	//while (1)
+	//{
+	//	ch = fgetc(stdin);
+	//	if (ch == EOF)
+	//		break;
+	//	fputc(ch, stdout);
+	//}
+	//int ch;
+
+	//while (1)
+	//{
+	//	ch = getchar();
+	//	if (ch == EOF)
+	//		break;
+	//	putchar(ch);
+	//}
+	//FILE* fp;
+	//char str[] = "pineapple";
+	//int i;
+
+	//fp = fopen("b.txt", "w");
+	//if (fp == NULL)
+	//{
+	//	printf("파일을 만들지 못했습니다.\n");
+	//	return 1;
+	//}
+	//i = 0;
+	//while (str[i] != '\0')
+	//{
+	//	fputc(str[i], fp);
+	//	i++;
+	//}
+	//fputc('\n', fp);
+	//fclose(fp);
+	//FILE* fp;
+	//int ch;
+
+	//fp = fopen("a.txt", "r");
+	//if (fp == NULL)
+	//{
+	//	printf("파일이 열리지 않았습니다.\n");
+	//	return 1;
+	//}
+	//while (1)
+	//{
+	//	ch = fgetc(fp);
+	//	if (ch == EOF)
+	//	{
+	//		break;
+	//	}
+	//	putchar(ch);
+	//}
+	//fclose(fp);
+	/*FILE* fp;
+
+	fp = fopen("a.txt", "r");
+	if (fp == NULL)
 	{
-		printf("%d ", current->num);
-		current = current->next;
+		printf("파일이 열리지 않았습니다.\n");
+		return 1;
 	}
-	printf("\n");
+	printf("파일이 열렸습니다.\n");
+	fclose(fp);*/
+	//17-2장
+	//Student s1 = { 315,4.2 };
+	//print_data(&s1);
+	//enum season ss;
+	//char* pc = NULL;
+
+	//ss = SPRING;
+	//switch (ss)
+	//{
+	//case SPRING:
+	//	pc = "inline";
+	//	break;
+	//case SUMMER:
+	//	pc = "swimming";
+	//	break;
+	//case FALL:
+	//	pc = "trip";
+	//	break;
+	//case WINTER:
+	//	pc = "skiing";
+	//	break;
+	//}
+	//printf("나의 레저 활동 => %s\n", pc);
+	//printf("열거형 enum크기 : %d\n", sizeof(ss));
+	//printf("%d %d %d %d\n", SPRING, SUMMER, FALL, WINTER);
+	/*union student s1 = { 3.15 };
+	struct student1 s2;
+	printf("학번 : %d\n", s1.num);
+	s1.grade = 4.4;
+	printf("학점 : %.1lf\n", s1.grade);
+	printf("학번 : %d\n", s1.num);
+	s1.num = 315;
+	printf("학번 : %d\n", s1.num);
+	printf("공용체사이즈 : %d\n", sizeof(s1));
+	printf("구조체사이즈 : %d\n", sizeof(s2));*/
+
+	//struct list a = { 10,0 }, b = { 20,0 }, c = { 30,0 };
+	//struct list* head = &a, * current;
+
+	//a.next = &b;
+	//b.next = &c;
+
+	//printf("head->num : %d\n", head->num);
+	//printf("head->next->num : %d\n", head->next->num);
+
+	//printf("list all : ");
+	//current = head;
+	//while (current != NULL)
+	//{
+	//	printf("%d ", current->num);
+	//	current = current->next;
+	//}
+	//printf("\n");
 	//struct address list[5] = {
 	//	{"홍길동1",222,"111","울릉도 독도"},
 	//	{"홍길동2",222,"111-","릉도 독도"},

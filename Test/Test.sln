@@ -35,6 +35,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2d_array_sum", "..\2d_array
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "구조체 응용 문제", "..\구조체 응용 문제\구조체 응용 문제.vcxproj", "{EA539CC3-D5E4-44F5-BB5E-16372C9CF147}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "login", "..\login\login.vcxproj", "{2C9FE7EF-82AF-41AF-BFA0-0F3E3406BFE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -171,6 +173,14 @@ Global
 		{EA539CC3-D5E4-44F5-BB5E-16372C9CF147}.Release|x64.Build.0 = Release|x64
 		{EA539CC3-D5E4-44F5-BB5E-16372C9CF147}.Release|x86.ActiveCfg = Release|Win32
 		{EA539CC3-D5E4-44F5-BB5E-16372C9CF147}.Release|x86.Build.0 = Release|Win32
+		{2C9FE7EF-82AF-41AF-BFA0-0F3E3406BFE5}.Debug|x64.ActiveCfg = Debug|x64
+		{2C9FE7EF-82AF-41AF-BFA0-0F3E3406BFE5}.Debug|x64.Build.0 = Debug|x64
+		{2C9FE7EF-82AF-41AF-BFA0-0F3E3406BFE5}.Debug|x86.ActiveCfg = Debug|Win32
+		{2C9FE7EF-82AF-41AF-BFA0-0F3E3406BFE5}.Debug|x86.Build.0 = Debug|Win32
+		{2C9FE7EF-82AF-41AF-BFA0-0F3E3406BFE5}.Release|x64.ActiveCfg = Release|x64
+		{2C9FE7EF-82AF-41AF-BFA0-0F3E3406BFE5}.Release|x64.Build.0 = Release|x64
+		{2C9FE7EF-82AF-41AF-BFA0-0F3E3406BFE5}.Release|x86.ActiveCfg = Release|Win32
+		{2C9FE7EF-82AF-41AF-BFA0-0F3E3406BFE5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
