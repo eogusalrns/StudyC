@@ -4,13 +4,33 @@
 #include <string.h>
 #include <math.h>
 #include "student.h"
-#define PI 3.14159
-#define LIMIT 100.0
-#define MSG "passed!"
-#define ERR_PRN printf("허용 범위를 벗어났습니다.\n")
-#define SUM(a,b) (a+b)
-#define MUL(a,b) (a*b)
-#
+#include "point.h"
+#include "line.h"
+//#pragma pack(push,1)
+//typedef struct
+//{
+//	char ch;
+//	int in;
+//}Sample1;
+//#pragma pack(pop)
+//typedef struct
+//{
+//	char ch;
+//	int in;
+//}Sample2;
+//#define VER 7
+//#define BIT16
+//#define PRINT_EXPR(x) printf(#x " = %d\n",x)
+//#define NAME_CAT(x,y) (x##y)
+//#define PI 3.14159
+//#define LIMIT 100.0
+//#define MSG "passed!"
+//#define ERR_PRN printf("허용 범위를 벗어났습니다.\n")
+//#define SUM(a,b) (a+b)
+//#define MUL(a,b) (a*b)
+//#define SUB(a,b) (a-b)
+//#define DIV(a,b) (a/b)
+//#define test(a) ((a)*10)
 //void func(int,int);
 //int func() // 입력과 출력이 없는 함수
 //{
@@ -288,17 +308,76 @@
 //	printf("학번 : %d\n", ps->num);
 //	printf("학점 : %.1lf\n", ps->grade);
 //}
+//void func()
+//{
+//	printf("\n");
+//	printf("파일명 : %s\n", __FILE__);
+//	printf("함수명 : %s\n", __FUNCTION__);
+//	printf("행번호 : %d\n", __LINE__);
+//}
+//int input_data(void);
+//double average(void);
+//void print_data(double);
+//int count = 0;
+//static int total = 0;
+
 int main() //메인 함수 한 프로젝트에 한 개만 존재해야 함
 {
-	//19-1장
-	int a = 10, b = 20;
-	int x = 30, y = 40;
-	int res;
+	//19-2장
+	Line a = { {1,2},{5,6} };
+	Point b;
 
-	printf("a + b = %d\n", SUM(a, b));
-	printf("x + y = %d\n", SUM(x, y));
-	res = 30 / MUL(2, 5);
-	printf("res : %d\n", res);
+	b.x = (a.first.x + a.second.x) / 2;
+	b.y = (a.first.y + a.second.y) / 2;
+	printf("선의 가운제 점의 좌표 : (%d,%d)\n", b.x, b.y);
+	//double avg;
+
+	//total = input_data();
+	//avg = average();
+	//print_data(avg);
+	//int a, b;
+	//double avg;
+
+	//input_data(&a, &b);
+	//avg = average(a, b);
+	//printf("%d %d의 평균 : %.1lf\n", a, b, avg);
+	//19-1장
+	/*printf("Sample1 구조체의 크기 : %d바이트\n", sizeof(Sample1));
+	printf("Sample2 구조체의 크기 : %d바이트\n", sizeof(Sample2));*/
+	//	int max;
+	//#if VER >=6
+	//	printf("버전%d입니다.\n", VER);
+	//#endif
+	//
+	//#ifndef BIT16
+	//	max = 32767;
+	//#else
+	//	max = 2147483647;
+	//#endif
+	//	printf("int형 변수의 최댓값 : %d\n", max);
+	//int a1, a2;
+
+	//NAME_CAT(a, 1) = 10;
+	//NAME_CAT(a, 2) = 20;
+	//PRINT_EXPR(a1 + a2);
+	//PRINT_EXPR(a2 - a1);
+	//	printf("컴파일 날짜와 시간 : %s, %s\n\n", __DATE__, __TIME__);
+	//	printf("파일명 : %s\n", __FILE__);
+	//	printf("함수명 : %s\n", __FUNCTION__);
+	//	printf("행번호 : %d\n", __LINE__);
+	//#line 100 "macro.c"
+	//	func();
+	//int a = 10, b = 20;
+	//int x = 30, y = 40;
+	//int res;
+	//printf("%d\n", test(a + 10));
+	//printf("a + b = %d\n", SUM(a, b));
+	//printf("a - b = %d\n", SUB(a, b));
+	//printf("a * b = %d\n", MUL(a, b));
+	//printf("a / b = %d\n", DIV(a, b));
+	//printf("x + y = %d\n", SUM(x, y));
+	//res = 30 / MUL(2, 5);
+	//printf("res : %d\n", res);
 	/*double radius, area;
 
 	printf("반지름을 입력하세요(10 이하) : ");
@@ -1439,3 +1518,8 @@ int main() //메인 함수 한 프로젝트에 한 개만 존재해야 함
 		printf("Cow\rWw\a\n");*/
 	return;
 }
+//void print_data(double avg)
+//{
+//	printf("입력한 양수의 개수 : %d\n", count);
+//	printf("전체 합과 평균 : %d, %.1lf\n", total, avg);
+//}
